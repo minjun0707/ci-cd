@@ -9,5 +9,5 @@ RUN ./gradlew bootJar
 FROM openjdk:11-slim
 COPY --from=builder build/libs/*.jar msa-user-query.jar
 VOLUME /tmp
-EXPOSE 8080
+EXPOSE 8088
 ENTRYPOINT ["java", "-jar", "msa-user-query.jar"]
