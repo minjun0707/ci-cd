@@ -25,4 +25,10 @@ public class UserQueryController {
     public Response readSpecificUser(@PathVariable String userId) {
         return Response.success(userService.readUserById(userId));
     }
+
+    @GetMapping("/api/test")
+    @ResponseStatus(HttpStatus.OK)
+    public String test() {
+        return "Good";
+    }
 }
